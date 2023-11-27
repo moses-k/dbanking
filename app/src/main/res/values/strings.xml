@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">dbanking</string>
+    <string name="welcome_text">dbanking</string>
+    <string name="sign_in_continue">Use your credential to login</string>
+    <string name="label_username">Email Address</string>
+    <string name="hint_enter_password">12345678</string>
+    <string name="login">Login</string>
+
+
+
+</resources>
