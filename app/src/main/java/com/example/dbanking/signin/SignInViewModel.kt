@@ -19,7 +19,7 @@ class SignInViewModel(val userRepository: UserRepository) : ViewModel() {
             isLoading = true
         viewModelScope.launch {
             try {
-                loginResponse = UserRepository.doLogin(User("kminchelle", "0lelplR"))
+                loginResponse = UserRepository.doLogin(User(username, password))
                 state = 1
                 loginResponse.isSuccess = true
                 isLoading = false
