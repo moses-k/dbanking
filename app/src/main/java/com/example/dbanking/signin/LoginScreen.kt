@@ -107,6 +107,7 @@ fun LoginScreen(
 
                 Spacer(modifier = Modifier.height(100.dp))
 
+                
                 Text(
                     text = stringResource(id = R.string.sign_in_continue),
                     fontWeight = FontWeight.Normal,
