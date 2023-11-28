@@ -56,6 +56,9 @@ import com.example.dbanking.ui.theme.ButtonBackgroundColor
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.dbanking.dashboard.DashBoardRoute
 
+object Destinations {
+    const val DASHBOARD_ROUTE = "dashboard/{email}"
+}
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -107,7 +110,7 @@ fun LoginScreen(
 
                 Spacer(modifier = Modifier.height(100.dp))
 
-                
+
                 Text(
                     text = stringResource(id = R.string.sign_in_continue),
                     fontWeight = FontWeight.Normal,
@@ -203,8 +206,7 @@ fun LoginScreen(
                         OnSignInClicked(email.text, "")
                         Toast.makeText(context,"success",Toast.LENGTH_LONG).show()
                         signUpViewModel.state = 0
-
-                        DashBoardRoute(email)
+                        //DashBoardRoute(message = email!!)
                     }
                     else{
                         Toast.makeText(context,signUpViewModel.loginResponse.message,Toast.LENGTH_LONG).show()
@@ -221,10 +223,11 @@ fun LoginScreen(
 @Composable
 fun LoginScreenPreview() {
     LoginScreen(OnSignInClicked = { _, _ ->
-    },
-        OnSkipClicked = {
+    }, OnSkipClicked = {
         })
 }
+
+
 
 
 
